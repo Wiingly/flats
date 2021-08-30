@@ -48,47 +48,47 @@ const SignUp = () => {
       ...formValues,
       [e.target.name]: e.target.value
     })
-}
-const submitForm = (e) => {
-  e.preventDefault()
-  const data = {username: formValues.username, password: formValues.password,}
-  axios
-  .post("https://wiingly.herokuapp.com/api/auth/register", data)
-  .then((resObj) => {
-    console.log("signup res", resObj)
-    history.push("/login")
-  })
-  .catch(err => console.log({err}))
-}
-return (
-  <div>
-    <SignUpNav/>
-    <div className="signup-border">
-      <form className="signupformcontainer" onSubmit={submitForm}>
-        <p className="signup">SIGN UP</p>
-        <div>
-          <label>
-            <input
-              name="username"
-              placeholder="username"
-              type="text"
-              value={formValues.username}
-              onChange={handleChanges}
-            />
-          </label>
-          <p>{formErrors.username}</p>
-          <label>
-            <input
-              name="password"
-              placeholder="password"
-              type="password"
-              value={formValues.password}
-              onChange={handleChanges}
-              id="password"
-            />
-          </label>
-          <p>{formErrors.password}</p>
-          <button disabled={disabled} type="submit">Submit</button>
+  }
+  const submitForm = (e) => {
+    e.preventDefault()
+    const data = {username: formValues.username, password: formValues.password,}
+    axios
+    .post("https://wiingly.herokuapp.com/api/auth/register", data)
+    .then((resObj) => {
+      console.log("signup res", resObj)
+      history.push("/login")
+    })
+    .catch(err => console.log({err}))
+  }
+  return (
+    <div>
+      <SignUpNav/>
+      <div className="signup-border">
+        <form className="signupformcontainer" onSubmit={submitForm}>
+          <p className="signup">SIGN UP</p>
+          <div>
+            <label>
+              <input
+                name="username"
+                placeholder="username"
+                type="text"
+                value={formValues.username}
+                onChange={handleChanges}
+              />
+            </label>
+            <p>{formErrors.username}</p>
+            <label>
+              <input
+                name="password"
+                placeholder="password"
+                type="password"
+                value={formValues.password}
+                onChange={handleChanges}
+                id="password"
+              />
+            </label>
+            <p>{formErrors.password}</p>
+            <button disabled={disabled} type="submit">Submit</button>
           </div>
         </form>
       </div>
