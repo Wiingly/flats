@@ -1,0 +1,59 @@
+@media (max-width: 800px) {
+
+    .stats-border {
+        border: 1px solid #CC7A00;
+        width: fit-content;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 15%;
+        padding-bottom: 25%;
+        text-align: center;
+        margin-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25%;
+    }
+
+    .categories {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: underline;
+        text-decoration-color: #CC7A00;
+        text-decoration-style: double;
+        color: #CC7A00;
+    }
+
+    .cflavor {
+        padding-right: 15%;
+        margin-right: 20%;
+        margin-left: -20%;
+    }
+
+    .camount {
+        padding-left: 10%;
+        margin-left: 20%;
+        margin-right: -20%;
+    }
+
+    .data {
+        margin-top: 13%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flavor-data {
+        text-align: left;
+        padding-right: 15%;
+        margin-right: 20%;
+        margin-left: -25%;
+    }
+
+    .amount-data {
+        text-align: right;
+        padding-left: 10%;
+        margin-left: 20%;
+        margin-right: -20%;
+    }
+
+}

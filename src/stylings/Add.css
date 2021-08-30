@@ -1,0 +1,25 @@
+.add-border {
+    border: 1px solid #CC7A00;
+    width: fit-content;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 15%;
+    padding-bottom: 25%;
+    text-align: center;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25%;
+}
+
+#flavor {
+    margin-bottom: 15%;
+}
+
+#amount {
+    margin-bottom: 15%;
+}
+
+#location {
+    margin-bottom: 25%;
+}
