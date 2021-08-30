@@ -6,7 +6,7 @@ const SignUpNav = () => {
 
   return(
     <div className="nav">
-        <div className="blank">_________</div>
+        <div className="blank">_______</div>
 
         <NavLink className="wing" to="/home">WINGLY</NavLink>
        
