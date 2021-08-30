@@ -9,13 +9,13 @@ import "../stylings/SignUp.css"
 const initialFormValues = {
   username: "",
   password: "",
-  confirmPassword: "",
 };
+
 const initialFormErrors = {
   username: "",
   password: "",
-  confirmPassword: "",
 };
+
 const SignUp = () => {
   const history = useHistory();
   const [formValues, setFormValues] = useState(initialFormValues);
@@ -88,7 +88,7 @@ return (
             />
           </label>
           <p>{formErrors.password}</p>
-          <div disabled={disabled} type="submit">Submit</div>
+          <button disabled={disabled} type="submit">Submit</button>
           </div>
         </form>
       </div>
