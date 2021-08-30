@@ -1,16 +1,10 @@
 import React, {useEffect, useState} from "react";
-import axios from 'axios';
-import { useHistory } from "react-router-dom";
-import styled from "styled-components";
-import WingStats from './WingStats';
 import { axiosWithAuth } from "../auth/axiosWithAuth";
 import HomeNav from "./HomeNav";
 import "../stylings/Total.css"
 
 function Stats() {
   const [wing, setWing] = useState([])
-  const { push } = useHistory();
-  const [takeMeBack, setTakeMeBack] = useState(false);
 
 
   useEffect(() => {

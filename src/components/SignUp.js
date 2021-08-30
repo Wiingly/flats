@@ -22,8 +22,6 @@ const SignUp = () => {
   const [formErrors, setFormErrors] = useState(initialFormErrors);
   const [disabled, setDisabled] = useState(true);
 
-  const { push } = useHistory()
-
   useEffect(() => {
     SignUpSchema.isValid(formValues).then((valid) => {
       setDisabled(!valid);
