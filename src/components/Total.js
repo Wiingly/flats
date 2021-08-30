@@ -31,7 +31,7 @@ function Stats() {
   // }
 
 
-return (
+  return (
     <div>
       <HomeNav/>
       <div className="border">
