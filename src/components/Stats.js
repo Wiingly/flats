@@ -1,7 +1,4 @@
 import React, {useEffect, useState} from "react";
-import axios from 'axios';
-import { useHistory } from "react-router-dom";
-import styled from "styled-components";
 import WingStats from './WingStats';
 import { axiosWithAuth } from "../auth/axiosWithAuth";
 import StatsNav from "./StatsNav";
@@ -9,8 +6,6 @@ import "../stylings/Stats.css"
 
 function Stats() {
   const [wing, setWing] = useState([])
-  const { push } = useHistory();
-  const [takeMeBack, setTakeMeBack] = useState(false);
 
 
   useEffect(() => {
@@ -45,9 +40,5 @@ return (
   );
 }
 
-const StyledH = styled.div`
-  display: flex;
-  justify-content: center;
-`
 
 export default Stats;

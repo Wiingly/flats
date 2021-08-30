@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import "../stylings/Stats.css"
 
 const WingStats = (props) => {
     const {
       flavor,
       amount,
-      location,
     } = props.wing;
 
     return (
