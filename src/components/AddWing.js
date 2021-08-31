@@ -19,6 +19,7 @@ const initialFormErrors = {
 
 const AddWing = (props) => {
   const [formErrors, setFormErrors] = useState(initialFormErrors);
+  const [showResults, setShowResults] = useState(false)
   const { wing_id } = props;
   const [formValues, setFormValues] = useState({
     ...initialFormValues,
@@ -45,8 +46,6 @@ const AddWing = (props) => {
       });
   };
 
-  console.log(formValues.flavor);
-
   const submitter = (evt) => {
     evt.preventDefault();
     const newWingData = {
@@ -65,6 +64,16 @@ const AddWing = (props) => {
         console.log({ "AddWing err:": err });
       });
   };
+
+  const Success = () => {
+    setShowResults(true)
+  }
+
+  const Results = () => (
+    <div id="results" className="wing-results">
+      WING ADDED
+    </div>
+  )
 
   return (
     <div>
@@ -113,7 +122,10 @@ const AddWing = (props) => {
           placeholder="banned if dominos"
         ></input>
         <br/>
-        <button>Add Wings</button>
+        <div>
+        <button type="submit" onClick={Success}>Add Wings</button>
+        { showResults ? <Results /> : null }
+        </div>
       </form>
     </div>
     </div>
