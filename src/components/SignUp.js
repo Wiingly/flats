@@ -54,8 +54,8 @@ const SignUp = () => {
     const data = {username: formValues.username, password: formValues.password,}
     axios
     .post("https://wiingly.herokuapp.com/api/auth/register", data)
-    .then((resObj) => {
-      console.log("signup res", resObj)
+    .then((res) => {
+      console.log("signup res", res.data)
       history.push("/login")
     })
     .catch(err => console.log({err}))
