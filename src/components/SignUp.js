@@ -70,7 +70,7 @@ const SignUp = () => {
             <label>
               <input
                 name="username"
-                placeholder="username"
+                placeholder="Username"
                 type="text"
                 value={formValues.username}
                 onChange={handleChanges}
@@ -80,7 +80,7 @@ const SignUp = () => {
             <label>
               <input
                 name="password"
-                placeholder="password"
+                placeholder="Password"
                 type="password"
                 value={formValues.password}
                 onChange={handleChanges}
