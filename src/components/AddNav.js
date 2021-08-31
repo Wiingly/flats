@@ -16,7 +16,6 @@ const AddNav = () => {
             HOME
         </NavLink>
     </div>
-
   )
 }
 
