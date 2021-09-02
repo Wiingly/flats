@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { axiosWithAuth } from "../auth/axiosWithAuth";
 import HomeNav from "./HomeNav";
+import Follower from "./Follower"
 import "../stylings/Total.css"
 
 function Stats() {
@@ -28,6 +29,7 @@ function Stats() {
   return (
     <div>
       <HomeNav/>
+      <Follower/>
       <div className="border">
       <p className="total">
         TOTAL
