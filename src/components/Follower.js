@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { axiosWithAuth } from "../auth/axiosWithAuth";
+// import FollowerInfo from "./FollowerInfo"
 
 function Stats() {
   const [follow, setFollow] = useState([])
@@ -9,7 +10,7 @@ function Stats() {
     axiosWithAuth()
     .get(`api/follow`)
     .then((response) => {
-      setFollow(response.data[0].user2_id);
+      setFollow(response.data.total);
       console.log(response.data)
     })
     .catch((error) => {
@@ -20,7 +21,7 @@ function Stats() {
 
   return (
     <div>
-      {follow}    
+        {follow}
     </div>
   );
 }

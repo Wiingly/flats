@@ -8,6 +8,6 @@ export const axiosWithAuth = () => {
     headers: {
       Authorization: token
     },
-    baseURL: 'https://wiingly.herokuapp.com/'
+    baseURL: 'http://localhost:5000/'
   })
 }
