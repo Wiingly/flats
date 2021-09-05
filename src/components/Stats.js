@@ -20,6 +20,8 @@ function Stats() {
     });
   }, []);
 
+  console.log(wing)
+
 return (
     <div>
       <StatsNav/>

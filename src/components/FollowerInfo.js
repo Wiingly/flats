@@ -3,12 +3,19 @@ import "../stylings/Stats.css"
 
 const FollowerInfo = (props) => {
     const {
-      user2_id,
-    } = props.f;
+      username,
+      wingStats,
+    } = props.follow;
+
+    console.log(username)
 
     return (
-        <div className="data">
-                {user2_id}
+        <div className="friends">
+          {username.map(u => {
+            return u.username
+          })} - {wingStats.map(w => {
+            return w.total
+          })}
         </div>
     )
 };

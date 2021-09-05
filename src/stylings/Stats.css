@@ -1,3 +1,79 @@
+.stats-border {
+    border: 1px solid #CC7A00;
+    width: fit-content;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 8%;
+    padding-bottom: 10%;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25%;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: underline;
+    text-decoration-color: #CC7A00;
+    text-decoration-style: double;
+    color: #CC7A00;
+}
+
+.cflavor {
+    padding-right: 15%;
+    margin-right: 20%;
+    margin-left: -20%;
+}
+
+.camount {
+    padding-left: 10%;
+    margin-left: 20%;
+    margin-right: -20%;
+}
+
+.data {
+    margin-top: 13%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flavor-data {
+    text-align: left;
+    padding-right: 15%;
+    margin-right: 20%;
+    margin-left: -25%;
+}
+
+.amount-data {
+    text-align: right;
+    padding-left: 10%;
+    margin-left: 20%;
+    margin-right: -20%;
+}
+
+.friends {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6%;
+    margin-bottom: -4%;
+    font-weight: 500;
+}
+
+.addfriend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9%;
+    margin-bottom: -5%;
+    color: #CC7A00;
+    text-decoration: none;
+    font-weight: 500;
+}
+
 @media (max-width: 800px) {
 
     .stats-border {
@@ -54,6 +130,26 @@
         padding-left: 10%;
         margin-left: 20%;
         margin-right: -20%;
+    }
+
+    .friends {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 12%;
+        margin-bottom: -12%;
+        font-weight: 500;
+    }
+
+    .addfriend {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25%;
+        margin-bottom: -15%;
+        color: #CC7A00;
+        text-decoration: none;
+        font-weight: 500;
     }
 
 }

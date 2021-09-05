@@ -1,4 +1,4 @@
-.add-border {
+.friend-border {
     border: 1px solid #CC7A00;
     width: fit-content;
     padding-left: 15%;
@@ -6,27 +6,10 @@
     padding-top: 5%;
     padding-bottom: 7%;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 20%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15%;
-}
-
-#flavor {
-    margin-bottom: 15%;
-}
-
-#amount {
-    margin-bottom: 15%;
-}
-
-#location {
-    margin-bottom: 25%;
-}
-
-.wing-results {
-    margin-top: 8%;
-    color: #CC7A00
 }
 
 .friend-results {
@@ -49,7 +32,7 @@
 }
 
 @media (max-width: 800px) {
-    .add-border {
+    .friend-border {
         border: 1px solid #CC7A00;
         width: fit-content;
         padding-left: 15%;
@@ -61,23 +44,6 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 15%;
-    }
-    
-    #flavor {
-        margin-bottom: 15%;
-    }
-    
-    #amount {
-        margin-bottom: 15%;
-    }
-    
-    #location {
-        margin-bottom: 25%;
-    }
-    
-    .wing-results {
-        margin-top: 8%;
-        color: #CC7A00
     }
     
     .friend-results {
@@ -95,7 +61,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 8%;
+        margin-top: 20%;
         margin-bottom: -18%;
     }
 }

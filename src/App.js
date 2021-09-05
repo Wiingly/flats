@@ -7,6 +7,7 @@ import SignUp from "./components/SignUp";
 import Total from "./components/Total"
 import AddWing from "./components/AddWing"
 import ProtectedRoute from "./components/ProtectedRoute";
+import Friend from "./components/Friend"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <ProtectedRoute path="/stats" component={Stats}/>
       <ProtectedRoute path="/home" component={Total}/>
       <ProtectedRoute path="/new" component={AddWing}/>
+      <ProtectedRoute path="/friend" component={Friend}/>
     </div>
   );
 }
