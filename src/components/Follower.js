@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from "react";
 import { axiosWithAuth } from "../auth/axiosWithAuth";
 import FollowerInfo from "./FollowerInfo"
-import { useHistory, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../stylings/Stats.css"
 
 function Stats() {
   const [follow, setFollow] = useState([])
 
-  const { push } = useHistory()
 
   useEffect(() => {
     axiosWithAuth()
