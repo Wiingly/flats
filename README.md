@@ -1,1 +1,1 @@
-Frontend for Wingly
+Frontend for Wingly :poultry_leg:
