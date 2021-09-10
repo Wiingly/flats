@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { axiosWithAuth } from "../auth/axiosWithAuth";
 import friendSchema from "./FriendSchema";
+import FollowerInfo from "./FollowerInfo"
 import * as yup from "yup";
 import '../stylings/Friend.css'
 import HomeNav from "./HomeNav";
@@ -16,22 +17,34 @@ const initialFormErrors = {
 const Friend = (props) => {
   const [formErrors, setFormErrors] = useState(initialFormErrors);
   const [userid, setUserid] = useState([])
-  const [showResults, setShowResults] = useState(false)
+  const [follow, setFollow] = useState([])
   const { follower_id } = props;
   const [formValues, setFormValues] = useState({
     ...initialFormValues,
     follower_id: follower_id,
   });
 
+  axiosWithAuth()
+    .get(`api/users`)
+    .then((res) => {
+      console.log(res.data);
+      setUserid(res.data);
+    })
+    .catch((err) => {
+      console.log({ "Friend err:": err });
+    });
+
+  useEffect(() => {
     axiosWithAuth()
-      .get(`api/users`)
-      .then((res) => {
-        console.log(res.data);
-        setUserid(res.data);
-      })
-      .catch((err) => {
-        console.log({ "Friend err:": err });
-      });
+    .get(`api/follow`)
+    .then((response) => {
+      setFollow(response.data);
+      // console.log(response.data)
+    })
+    .catch((error) => {
+      console.log(error)
+    });
+    }, []);
 
   const changeHandler = (evt) => {
     setFormValues({ ...formValues, [evt.target.name]: evt.target.value });
@@ -58,9 +71,9 @@ const Friend = (props) => {
     const newFollowerData = {
       follower_id: follower_id,
       user2_id: formValues.user2_id.trim(),
-    };
+  };
 
-    axiosWithAuth()
+  axiosWithAuth()
       .post(`api/follow`, newFollowerData)
       .then((res) => {
         console.log(res);
@@ -70,19 +83,21 @@ const Friend = (props) => {
       });
   };
 
-  const Success = () => {
-    setShowResults(true)
-  }
-
-  const Results = () => (
-    <div id="results" className="friend-results">
-      FRIEND ADDED
-    </div>
-  )
+  function refreshPage(){
+    window.location.reload();
+} 
 
   return (
     <div>
     <HomeNav/>
+    <div>
+        {follow.map(follow => {
+          console.log(follow)
+          return (
+            <FollowerInfo key={follow.user2_id} follow={follow}/>
+          )
+        })}
+      </div>
     <div className="userid">
           YOUR ID: {userid}
     </div>
@@ -100,11 +115,10 @@ const Friend = (props) => {
           id="user2_id"
           value={formValues.user2_id}
           onChange={changeHandler}
-          placeholder="add my cat his ID is 3"
+          placeholder="add my cat, his ID is 3"
         ></input>
         <div>
-        <button type="submit" onClick={Success}>Follow</button>
-        { showResults ? <Results /> : null }
+        <button type="submit" onClick={refreshPage}>Follow</button>
         </div>
       </form>
       

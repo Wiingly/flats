@@ -54,15 +54,6 @@
     margin-right: -20%;
 }
 
-.friends {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 6%;
-    margin-bottom: -4%;
-    font-weight: 500;
-}
-
 .addfriend {
     display: flex;
     align-items: center;
@@ -130,15 +121,6 @@
         padding-left: 10%;
         margin-left: 20%;
         margin-right: -20%;
-    }
-
-    .friends {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 12%;
-        margin-bottom: -12%;
-        font-weight: 500;
     }
 
     .addfriend {
